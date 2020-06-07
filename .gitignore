@@ -2,18 +2,40 @@
 # from  being committed.
 # remove all cached files git rm -r --cached .
 
-
-# IntelliJ project files
-*.iml
-.idea/
-
-
 # Built/Transpiled files
 **/build/
 **/src/**/*.js
 **/src/**/*.js.map
 
-
 # Misc
 **/node_modules/
-**/package-lock.json
+
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/.pnp
+.pnp.js
+
+# production
+/build
+
+# misc
+.DS_Store
+Thumbs.db
+.sass-cache/
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Idea
+.idea/workspace.xml
+.idea/tasks.xml
+
+# Docker
+/Docker/Data/*
