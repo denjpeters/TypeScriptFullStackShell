@@ -2,51 +2,36 @@
   "name": "typescriptfullstackshell",
   "version": "1.0.0",
   "description": "demonstrate how to do full-stack TypeScript development",
-  "main": "src/start.js",
+  "main": "src/mainServer/index.ts",
   "scripts": {
-    "start": "npm install --only=prod && NODE_ENV=production node ./build/start.js",
-    "start-dev": "nodemon --config \"./util/nodemon.json\"/",
-    "test": "NODE_ENV=testing ts-node ./src/start.ts",
-    "build": "sh ./util/buildForProd.sh"
+    "start": "node dist/index",
+    "webpack": "webpack --config webpack.config.ts"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/seanpmaxwell/TypeScriptFullStackShell.git"
-  },
-  "keywords": [
-    "TypeScript",
-    "Express",
-    "React",
-    "FullStack",
-    "Professional",
-    "Enterprise",
-    "Startup"
-  ],
-  "author": "Sean Maxwell",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/seanpmaxwell/TypeScriptFullStackShell/issues"
-  },
-  "homepage": "https://github.com/seanpmaxwell/TypeScriptFullStackShell#readme",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@overnightjs/core": "^1.6.4",
     "@overnightjs/logger": "^1.1.4",
-    "express": "^4.16.4",
-    "http-status-codes": "^1.3.2"
+    "http-status-codes": "^1.3.2",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^5.3.3",
+    "helmet": "^3.22.0",
+    "jwks-rsa": "^1.8.0"
   },
   "devDependencies": {
-    "@types/body-parser": "^1.17.0",
-    "@types/express": "^4.16.0",
-    "@types/jasmine": "^3.3.7",
-    "@types/node": "^10.12.18",
-    "@types/supertest": "^2.0.7",
-    "jasmine": "^3.3.1",
-    "nodemon": "^1.18.10",
-    "supertest": "^3.4.1",
-    "ts-node": "^8.0.2",
-    "tsc": "^1.20150623.0",
-    "tslint": "^5.12.1",
-    "tslint-lines-between-class-members": "^1.3.1",
-    "typescript": "^3.2.4"
+    "@types/cors": "^2.8.6",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.6",
+    "@types/express-jwt": "0.0.42",
+    "@types/helmet": "0.0.47",
+    "@types/node": "^14.0.11",
+    "ts-loader": "^7.0.5",
+    "typescript": "^3.9.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-node-externals": "^1.7.2"
   }
 }
